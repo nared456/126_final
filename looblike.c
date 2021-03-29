@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-    int N, i, j = 0, k, Max = 0, ch = 0, tmp;
+    int N, i, j = 0, k, Max = 0, ch = 0, tmp, Ch = 0;
     int chmax;
     scanf("%d", &N);
     int comment[N];
@@ -31,18 +31,28 @@ int main()
     }
     else
     {
-        for (i = 0; i < N; i++)
+        while (Ch != N-1)
         {
-            if (comment[i] > comment[i + 1])
+            for (i = 0; i < N; i++)
             {
-                tmp = comment[i + 1];
-                comment[i + 1] = comment[i];
-                comment[i] = tmp;
+                if (comment[i] > comment[i + 1])
+                {
+                    tmp = comment[i + 1];
+                    comment[i + 1] = comment[i];
+                    comment[i] = tmp;
+                }
+            }
+            for (i = 0; i< N; i++)
+            {
+                if (comment[i] < comment[i+1])
+                {
+                    Ch++;
+                }
             }
         }
-        for (i = 0; i< N; i++)
+        for (i = 0; i < N; i++)
         {
-            printf("%d ",comment[i]);
+            printf("%d ", comment[i]);
         }
     }
     return 0;
