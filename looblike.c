@@ -21,12 +21,15 @@ int main()
         {
             Min = comment[i];
         }
-        if (Max == comment[i])
+    }
+    for (j = 0; j < N; j++)
+    {
+        if (Max == comment[j])
         {
             ch++;
         }
     }
-    if (ch >= 0 && ch <= 2)
+    if (ch >= 0 && ch < 2)
     {
         printf("%d", chmax);
     }
