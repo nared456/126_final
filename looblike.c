@@ -17,10 +17,6 @@ int main()
             Max = comment[i];
             chmax = i + 1;
         }
-        if (Min > comment[i])
-        {
-            Min = comment[i];
-        }
     }
     for (j = 0; j < N; j++)
     {
@@ -35,7 +31,19 @@ int main()
     }
     else
     {
-        printf("%d %d", Min, Max);
+        for (i = 0; i < N; i++)
+        {
+            if (comment[i] > comment[i + 1])
+            {
+                tmp = comment[i + 1];
+                comment[i + 1] = comment[i];
+                comment[i] = tmp;
+            }
+        }
+        for (i = 0; i< N; i++)
+        {
+            printf("%d ",comment[i]);
+        }
     }
     return 0;
 }
