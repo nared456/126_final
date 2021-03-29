@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-    int N, i, j = 0, k, Max = 0, ch = 0;
+    int N, i, j = 0, k, Max = 0, ch = 0, tmp;
     int chmax;
     scanf("%d", &N);
     int comment[N];
@@ -29,13 +29,13 @@ int main()
             ch++;
         }
     }
-    if (ch >= 0 && ch < 2)
+    if (ch >= 0 && ch < 2 || ch == N)
     {
         printf("%d", chmax);
     }
     else
     {
-        printf("%d %d\n", Min, Max);
+        printf("%d %d", Min, Max);
     }
     return 0;
 }

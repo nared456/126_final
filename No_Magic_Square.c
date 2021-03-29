@@ -1,4 +1,7 @@
 #include <stdio.h>
+void check()
+{
+}
 int main()
 {
     int N[3], i, j;
@@ -11,7 +14,7 @@ int main()
     {
         for (j = 0; j < N[0]; j++)
         {
-            scanf("%d",&A[i][j]);
+            scanf("%d", &A[i][j]);
         }
     }
     printf("\n");
@@ -20,7 +23,7 @@ int main()
     {
         for (j = 0; j < N[1]; j++)
         {
-            scanf("%d",&B[i][j]);
+            scanf("%d", &B[i][j]);
         }
     }
     printf("\n");
@@ -29,7 +32,7 @@ int main()
     {
         for (j = 0; j < N[2]; j++)
         {
-            scanf("%d",&C[i][j]);
+            scanf("%d", &C[i][j]);
         }
     }
     return 0;
