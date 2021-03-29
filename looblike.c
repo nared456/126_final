@@ -17,28 +17,22 @@ int main()
             Max = comment[i];
             chmax = i + 1;
         }
-    }
-    for (k = 0; k < N; k++)
-    {
-        if (Max == comment[k])
+        if (Min > comment[i])
+        {
+            Min = comment[i];
+        }
+        if (Max == comment[i])
         {
             ch++;
         }
     }
-    if (ch >= 0 && ch < 2)
+    if (ch >= 0 && ch <= 2)
     {
         printf("%d", chmax);
     }
     else
     {
-        for (i = 0; i < N; i++)
-        {
-            if (Min > comment[i])
-            {
-                Min = comment[i];
-            }
-        }
-        printf("%d %d", Min, Max);
+        printf("%d %d\n", Min, Max);
     }
     return 0;
 }
